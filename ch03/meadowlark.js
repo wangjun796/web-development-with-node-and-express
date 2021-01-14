@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-01-14 14:00:22
+ * @LastEditTime: 2021-01-14 14:04:44
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \web-development-with-node-and-express-mastere:\express\web-development-with-node-and-express\ch03\meadowlark.js
+ */
 var express = require('express');
 
 var app = express();
@@ -31,6 +39,7 @@ app.get('/about', function(req,res){
 
 // 404 catch-all handler (middleware)
 app.use(function(req, res, next){
+	res.status(404);
 	res.status(404);
 	res.render('404');
 });
